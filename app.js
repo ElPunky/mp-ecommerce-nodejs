@@ -76,7 +76,7 @@ app.post("/create_preference", (req, res) => {
         notification_url: "https://enzopeli-mp-commerce-nodejs.herokuapp.com/notifications",
     };
 
-    debugger;
+
 
     mercadopago.preferences
         .create(preference)

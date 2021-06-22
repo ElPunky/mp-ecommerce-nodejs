@@ -106,13 +106,14 @@
 
                             document.addEventListener("DOMContentLoaded", async function () {
                                 var parameters = new URLSearchParams(window.location.search);
-
+                                debugger;
                                 var response = await axios({
                                     method: "post",
                                     url: "/create_preference",
                                     headers: {
                                         "content-type": "application/json",
                                     },
+                                    
                                     data: JSON.stringify({
                                         title: parameters.get("title"),
                                         picture_url: parameters.get("img"),
