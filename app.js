@@ -59,9 +59,9 @@ app.post("/create_preference", (req, res) => {
             },
         },
         back_urls: {
-            success: "http://localhost:3000/feedback?feedback=success",
-            failure: "http://localhost:3000/feedback?feedback=failure",
-            pending: "http://localhost:3000/feedback?feedback=pending",
+            success: "https://enzopeli-mp-commerce-nodejs.herokuapp.com/feedback?feedback=success",
+            failure: "https://enzopeli-mp-commerce-nodejs.herokuapp.com/feedback?feedback=failure",
+            pending: "https://enzopeli-mp-commerce-nodejs.herokuapp.com/feedback?feedback=pending",
         },
         auto_return: "approved",
         payment_methods: {
@@ -73,7 +73,7 @@ app.post("/create_preference", (req, res) => {
             }, ],
             installments: 6,
         },
-        notification_url: "http://localhost:3000/notifications",
+        notification_url: "https://enzopeli-mp-commerce-nodejs.herokuapp.com/notifications",
     };
 
     debugger;
