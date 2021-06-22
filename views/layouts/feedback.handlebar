@@ -79,7 +79,7 @@
                         .getElementById("store-btn")
                         .addEventListener("click", function() {
                             window.location.href =
-                                "https://enzopeli-mp-commerce-nodejs.herokuapp.com/";
+                                "https://enzopeli-mp-commerce-nodejs.herokuapp.com";
                         });
                 </script>
             </div>
