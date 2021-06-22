@@ -1,6 +1,6 @@
 var express = require("express");
 var exphbs = require("express-handlebars");
-var port = process.env.PORT || 30000;
+var port = process.env.PORT || 3000;
 
 // SDK de Mercado Pago
 const mercadopago = require("mercadopago");
@@ -76,6 +76,8 @@ app.post("/create_preference", (req, res) => {
         notification_url: "http://localhost:3000/notifications",
     };
 
+    debugger;
+
     mercadopago.preferences
         .create(preference)
         .then(function(response) {
@@ -85,7 +87,7 @@ app.post("/create_preference", (req, res) => {
             console.log(error);
         });
 
-    debugger;
+
 });
 
 app.post("/notifications", (req, res) => {
