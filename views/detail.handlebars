@@ -106,8 +106,6 @@
 
                             document.addEventListener("DOMContentLoaded", async function () {
                                 var parameters = new URLSearchParams(window.location.search);
-                                debugger;
-                                var a = 'hola';
                                 var response = await axios({
                                     method: "post",
                                     url: "/create_preference",
@@ -117,7 +115,7 @@
                                     
                                     data: JSON.stringify({
                                         title: parameters.get("title"),
-                                        picture_url: parameters.get("img"),
+                                        picture_url: "https://enzopeli-mp-commerce-nodejs.herokuapp.com" + parameters.get("img").substr(1),
                                         quantity: parameters.get("unit"),
                                         unit_price: parameters.get("price"),
                                     }),
